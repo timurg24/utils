@@ -1,5 +1,6 @@
 add_library(utils STATIC
     src/StringOps.cpp
+    src/FileOps.cpp
 )
 
 target_include_directories(utils
