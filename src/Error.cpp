@@ -21,7 +21,7 @@ void utils::Print(const char* fmt, ...) {
 
     va_end(args);
 
-    std::cout << buffer << "\n";
+    std::cout << buffer;
 }
 
 void utils::Alert(const char* fmt, ...)
