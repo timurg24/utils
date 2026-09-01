@@ -1,4 +1,4 @@
-#include "StringOps.hpp"
+#include "Utils/StringOps.hpp"
 
 /// @brief Splits a string into a vector
 /// @param source Source string
@@ -18,4 +18,20 @@ std::vector<std::string> utils::splitString(const std::string &source, char deli
 
     result.emplace_back(acc);
     return result;
+}
+
+/// @brief Does FNV-1a hash to a string
+/// @param string String
+/// @return Hashed string
+uint32_t utils::hashString(const std::string &string)
+{
+    uint32_t hash = 2166136261u;
+
+    for (unsigned char c : string)
+    {
+        hash ^= c;
+        hash *= 16777619u;
+    }
+
+    return hash;
 }
