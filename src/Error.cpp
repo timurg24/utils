@@ -11,7 +11,7 @@
 // windows
 #include <windows.h>
 
-void Print(const char* fmt, ...) {
+void utils::Print(const char* fmt, ...) {
     char buffer[2048];
 
     va_list args;
@@ -24,7 +24,7 @@ void Print(const char* fmt, ...) {
     std::cout << buffer << "\n";
 }
 
-void Alert(const char* fmt, ...)
+void utils::Alert(const char* fmt, ...)
 {
     char buffer[2048];
 
@@ -46,7 +46,7 @@ void Alert(const char* fmt, ...)
 }
 
 [[noreturn]]
-void FatalError(const char* fmt, ...)
+void utils::FatalError(const char* fmt, ...)
 {
     char buffer[2048];
 
